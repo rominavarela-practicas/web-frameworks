@@ -18,6 +18,6 @@ Open `http://localhost:3000/` in your browser. That's it!
 
 # Technology Choises
 
-| Style | Next.js built-in support for Sass. |
+| Style | Next.js built-in support for SASS and SCSS. |
 | - | - |
 

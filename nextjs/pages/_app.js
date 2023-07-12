@@ -4,7 +4,7 @@
  * in your application. You can use this component to keep state when navigating between pages,
  * or to add global styles.
 */
-import '../styles/globals.css';
+import '../styles/globals.scss';
 
 export default function App({ Component, pageProps }) {
     return <Component {...pageProps} />;
