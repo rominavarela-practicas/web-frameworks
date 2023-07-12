@@ -1,5 +1,4 @@
-
-# Getting Started
+# Very simple Nextjs App - Getting Started
 
 #### Requirements
 
@@ -15,9 +14,10 @@
 
 Open `http://localhost:3000/` in your browser. That's it!
 
+![2MD4F0DwO4](https://github.com/rominavarela-practicas/frontend-frameworks/assets/7092275/cd4872b0-1d72-4bd4-a00c-5fba3cbd100f)
+
 # Technology Choises
 
 | Style | Next.js built-in support for Sass. |
 | - | - |
-
 
