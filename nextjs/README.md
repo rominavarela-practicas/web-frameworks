@@ -14,10 +14,9 @@
 
 Open `http://localhost:3000/` in your browser. That's it!
 
-![2MD4F0DwO4](https://github.com/rominavarela-practicas/frontend-frameworks/assets/7092275/cd4872b0-1d72-4bd4-a00c-5fba3cbd100f)
+![hrAM51AnE2](https://github.com/rominavarela-practicas/frontend-frameworks/assets/7092275/b4f9aa27-1821-466a-97e5-838afde8f001)
 
 # Technology Choises
 
 | Style | Next.js built-in support for SASS and SCSS. |
 | - | - |
-
