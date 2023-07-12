@@ -42,7 +42,7 @@ export default function Home() {
 
       <main>
         <div className={styles.grid}>
-          <a href="/dynamic/dashboard" className={styles.card}>
+          <a href="/swr/countries" className={styles.card}>
             <h3>Dynamic Dashboard using Client Side Rendering</h3>
             <p>
               If you do not need to pre-render the data, you can also use the Client-side Rendering strategy:
