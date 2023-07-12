@@ -1,4 +1,4 @@
-# Very simple Nextjs App - Getting Started
+# Nextjs - Basic App
 
 #### Requirements
 
