@@ -1,19 +1,19 @@
 import Head from 'next/head';
 import Layout from '../../../components/layout';
-import { getCountriesData } from '../../../lib/countries';
+import { useCountries } from '../../../hooks/useCountries';
 
 export async function getStaticProps() {
-    console.log("getStaticProps at /static/countries");
-    const allCountriesData = await getCountriesData();
+    console.log("getServerSideProps at /static/countries");
+    const countries = await useCountries();
     return {
       props: {
-        allCountriesData,
+        countries,
       },
     };
   }
 
-export default function Countries({ allCountriesData }) {
-    console.log("Rendering /static/countries");
+export default function Countries({ countries }) {
+    console.log("Rendering /ssr/countries");
     return (
         <Layout>
         <Head>
@@ -21,7 +21,7 @@ export default function Countries({ allCountriesData }) {
         </Head>
         <h1>All Countries</h1>
         <ul>
-          {allCountriesData.map(({ name: { official } }) => (
+          {(countries.data || []).map(({ name: { official } }) => (
             <li key={official}>
               {official}
             </li>

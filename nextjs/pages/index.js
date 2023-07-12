@@ -39,6 +39,26 @@ export default function Home() {
           </a>
         </div>
       </main>
+
+      <main>
+        <div className={styles.grid}>
+          <a href="/dynamic/dashboard" className={styles.card}>
+            <h3>Dynamic Dashboard using Client Side Rendering</h3>
+            <p>
+              If you do not need to pre-render the data, you can also use the Client-side Rendering strategy:
+            </p>
+            <ul>
+              <li>
+                Statically generate (pre-render) parts of the page that do not require external data.
+              </li>
+              <li>
+                When the page loads, fetch external data from the client using JavaScript and populate the remaining parts.
+              </li>
+            </ul>
+          </a>
+        </div>
+      </main>
+
       <footer>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
