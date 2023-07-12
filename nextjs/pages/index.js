@@ -29,6 +29,16 @@ export default function Home() {
         </div>
       </main>
 
+      <main>
+        <div className={styles.grid}>
+          <a href="/ssr/countries" className={styles.card}>
+            <h3>List of Countries with Server Side Rendering</h3>
+            <p>
+              Because getServerSideProps is called at request time, its parameter (context) contains request specific parameters. You should use getServerSideProps only if you need to pre-render a page whose data must be fetched at request time.
+            </p>
+          </a>
+        </div>
+      </main>
       <footer>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
