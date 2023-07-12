@@ -3,6 +3,7 @@ import Layout from '../../../components/layout';
 import { getCountriesData } from '../../../lib/countries';
 
 export async function getStaticProps() {
+    console.log("getStaticProps at /static/countries");
     const allCountriesData = await getCountriesData();
     return {
       props: {
@@ -12,6 +13,7 @@ export async function getStaticProps() {
   }
 
 export default function Countries({ allCountriesData }) {
+    console.log("Rendering /static/countries");
     return (
         <Layout>
         <Head>
