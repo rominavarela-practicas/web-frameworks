@@ -1,0 +1,18 @@
+.footerContainer {
+    width: 100%;
+}
+
+.footer {
+    display: inline-block;
+    background: #c2d9e8;
+    width: 100%;
+    text-align: center;
+    padding: 1em;
+    margin-top: 3em;
+
+    &:hover {
+        color: white;
+        background-color: #a94a9c;
+        transition: color 1.5s ease, background-color 1.5s ease;
+    }
+}
