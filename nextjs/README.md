@@ -24,4 +24,4 @@ This project presents a minimal structure to showcase specific features in Next 
 
 Open `http://localhost:3000/` in your browser. That's it!
 
-![8ZJruRwm89](https://github.com/rominavarela-practicas/frontend-frameworks/assets/7092275/e1441807-ca14-41bd-b2ae-057a19b3d608)
+![ZZwtw8IrOp](https://github.com/rominavarela-practicas/frontend-frameworks/assets/7092275/552f33c7-6dbb-4be6-bcb8-eec6069015d3)
