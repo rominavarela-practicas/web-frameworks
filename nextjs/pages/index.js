@@ -1,12 +1,12 @@
 import Head from 'next/head'
 import styles from '../styles/Index.module.scss';
+import Layout from '../components/layout';
 import Card from '../components/card/Card.js';
-import Footer from '../components/footer/Footer.js';
 
 export default function Home() {
   console.log("Rendering Home");
   return (
-    <div className={styles.container}>
+    <Layout>
       <Head>
         <title>Hello Next!</title>
         <link rel="icon" href="/favicon.ico" />
@@ -68,8 +68,7 @@ export default function Home() {
           <Card title="Dynamic Counter using Client Side Rendering" href="/swr/counter"></Card>
         </div>
       </main>
-
-      <Footer/>
-    </div>
+    </Layout>
+    
   )
 }

@@ -1,5 +1,25 @@
 .container {
-    max-width: 36rem;
-    padding: 0 1rem;
-    margin: 3rem auto 6rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    padding-top: 1em;
   }
+}
+
+.homeLink {
+  position: absolute;
+  left: 1em;
+  top: 1em;
+  width: auto;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}
