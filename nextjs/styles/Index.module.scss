@@ -1,6 +1,5 @@
 .container {
   min-height: 100vh;
-  padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,6 +14,14 @@
   display: flex;
   flex-wrap: wrap;
   max-width: 80em;
+}
+
+.footer {
+  background: #c2d9e8;
+  width: 100%;
+  text-align: center;
+  padding: 1em;
+  margin-top: 3em;
 }
 
 @media (max-width: 600px) {

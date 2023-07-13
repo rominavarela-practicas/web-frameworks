@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Index.module.scss';
 import Card from '../components/card/Card.js';
+import Link from 'next/link'
 
 export default function Home() {
   console.log("Rendering Home");
@@ -56,14 +57,14 @@ export default function Home() {
         </div>
       </main>
 
-      <footer>
-        <a
+      <footer className={styles.footer}>
+        <Link
           href="https://github.com/rominavarela"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Follow me!
-        </a>
+          Follow me @Github
+        </Link>
       </footer>
     </div>
   )
