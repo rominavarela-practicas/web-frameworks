@@ -14,6 +14,10 @@ export default function Home() {
 
       <main>
 
+      <h1>Hello Next!</h1>
+
+      <hr />
+
       <h1>Countries API</h1>
 
         <div className={styles.grid}>
@@ -54,6 +58,14 @@ export default function Home() {
               </li>
             </ul>
           </Card>
+        </div>
+
+        <hr/>
+
+        <h1>Challengues</h1>
+
+        <div className={styles.grid}>
+          <Card title="Dynamic Counter using Client Side Rendering" href="/swr/counter"></Card>
         </div>
       </main>
 
