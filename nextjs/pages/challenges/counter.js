@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Layout from '../../components/layout';
 
 export default function Countries() {
-    console.log("Rendering /swr/counter");
+    console.log("Rendering /challenges/counter");
     
     const [ count, setCount ] = useState(0);
     

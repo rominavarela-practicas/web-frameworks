@@ -62,10 +62,10 @@ export default function Home() {
 
         <hr/>
 
-        <h1>Challengues</h1>
+        <h1>Challenges</h1>
 
         <div className={styles.grid}>
-          <Card title="Dynamic Counter using Client Side Rendering" href="/swr/counter"></Card>
+          <Card title="Dynamic Counter using Client Side Rendering" href="/challenges/counter"></Card>
         </div>
       </main>
     </Layout>

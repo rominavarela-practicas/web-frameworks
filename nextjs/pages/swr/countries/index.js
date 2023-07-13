@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Layout from '../../components/layout';
+import Layout from '../../../components/layout';
 import axios from "axios";
 import useSWR from 'swr';
 
