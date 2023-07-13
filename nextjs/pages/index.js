@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Index.module.scss';
+import Card from '../components/card/Card.js';
 
 export default function Home() {
   console.log("Rendering Home");
@@ -11,11 +12,15 @@ export default function Home() {
       </Head>
 
       <main>
+
+      <h1>Countries API</h1>
+
         <div className={styles.grid}>
-          <a href="/static/countries" className={styles.card}>
-            <h3>List of Countries with Static Site Rendering</h3>
+          <Card title="List of Countries with Static Site Rendering" href="/static/countries">
             <p>
-              getStaticProps only runs on the server-side. It won’t even be included in the JS bundle for the browser. That means you can write code such as direct database queries without them being sent to browsers.  
+              getStaticProps only runs on the server-side. It won’t even be included in
+              the JS bundle for the browser. That means you can write code such as direct
+              database queries without them being sent to browsers.  
             </p>
             <ul>
               <li>
@@ -25,21 +30,17 @@ export default function Home() {
                 In production it will run at runtime.
               </li>
             </ul>
-          </a>
-        </div>
-      
-        <div className={styles.grid}>
-          <a href="/ssr/countries" className={styles.card}>
-            <h3>List of Countries with Server Side Rendering</h3>
+          </Card>
+
+          <Card title="List of Countries with Server Side Rendering" href="/ssr/countries">
             <p>
-              Because getServerSideProps is called at request time, its parameter (context) contains request specific parameters. You should use getServerSideProps only if you need to pre-render a page whose data must be fetched at request time.
+              Because getServerSideProps is called at request time, its parameter (context) contains
+              request specific parameters. You should use getServerSideProps only if you need to pre-render
+              a page whose data must be fetched at request time.
             </p>
-          </a>
-        </div>
-      
-        <div className={styles.grid}>
-          <a href="/swr/countries" className={styles.card}>
-            <h3>Dynamic Dashboard using Client Side Rendering</h3>
+          </Card>
+
+          <Card title="Dynamic Dashboard using Client Side Rendering" href="/swr/countries">
             <p>
               If you do not need to pre-render the data, you can also use the Client-side Rendering strategy:
             </p>
@@ -51,7 +52,7 @@ export default function Home() {
                 When the page loads, fetch external data from the client using JavaScript and populate the remaining parts.
               </li>
             </ul>
-          </a>
+          </Card>
         </div>
       </main>
 
