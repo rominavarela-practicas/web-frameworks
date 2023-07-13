@@ -17,7 +17,7 @@ export default function Home() {
       <h1>Countries API</h1>
 
         <div className={styles.grid}>
-          <Card title="List of Countries with Static Site Rendering" href="/static/countries">
+          <Card title="With Static Site Rendering" href="/static/countries">
             <p>
               getStaticProps only runs on the server-side. It won’t even be included in
               the JS bundle for the browser. That means you can write code such as direct
@@ -33,7 +33,7 @@ export default function Home() {
             </ul>
           </Card>
 
-          <Card title="List of Countries with Server Side Rendering" href="/ssr/countries">
+          <Card title="With Server Side Rendering" href="/ssr/countries">
             <p>
               Because getServerSideProps is called at request time, its parameter (context) contains
               request specific parameters. You should use getServerSideProps only if you need to pre-render
@@ -41,7 +41,7 @@ export default function Home() {
             </p>
           </Card>
 
-          <Card title="Dynamic Dashboard using Client Side Rendering" href="/swr/countries">
+          <Card title="With Client Side Rendering" href="/swr/countries">
             <p>
               If you do not need to pre-render the data, you can also use the Client-side Rendering strategy:
             </p>

@@ -19,10 +19,19 @@
         display: block;
         padding: 1em;
         color: white;
+        .slide {
+            margin-left: 0.5em;
+        }
     }
 
     a:hover {
         text-decoration: none;
         background: #3596dc;
+        .slide {
+            transform: translateX(10em);
+            position: absolute;
+            transition: all 1s;
+        }
     }
 }
+

@@ -8,7 +8,9 @@ export default function Card({ title, href, children }) {
       <div className={styles.card}>
           <h1>{ title }</h1>
           { children }
-          <Link className={styles.card.bottomLink} href={ href }>Test it out ➜ </Link>
+          <Link href={ href }>
+            Test it out <span className={styles.slide}> ➜ </span>
+          </Link>
       </div>
     </div>
   )
