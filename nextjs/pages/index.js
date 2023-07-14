@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Index.module.scss';
-import Layout from '../components/layout';
+import Layout from '../components/layout/Layout';
 import Card from '../components/card/Card.js';
 
 export default function Home() {

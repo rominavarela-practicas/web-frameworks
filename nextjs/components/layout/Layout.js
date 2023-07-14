@@ -1,7 +1,7 @@
 import { usePathname } from 'next/navigation'
-import styles from './layout.module.scss';
+import styles from './Layout.module.scss';
 import Link from 'next/link'
-import Footer from '../components/footer/Footer.js';
+import Footer from '../../components/footer/Footer.js';
 
 export default function Layout({ children }) {
   const pathname = usePathname()
