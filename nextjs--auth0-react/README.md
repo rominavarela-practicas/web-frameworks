@@ -7,7 +7,7 @@ This project presents a minimal structure to showcase the integration with Auth0
 | Technology Choise |  |
 | ----- | -----|
 | Style | Next.js built-in support for SASS and SCSS. |
-| [@auth0/nextjs-auth0](https://yarnpkg.com/package/@auth0/nextjs-auth0) | Next.js SDK for signing in with Auth0. |
+| [@auth0/auth0-react](https://yarnpkg.com/package/@auth0/auth0-react) | Auth0 SDK for React Single Page Applications (SPA) |
 
 #### Requirements
 
