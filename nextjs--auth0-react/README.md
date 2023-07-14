@@ -23,3 +23,6 @@ This project presents a minimal structure to showcase the integration with Auth0
 
 Open `http://localhost:3000/` in your browser. That's it!
 
+![Gb6xN5HmZg](https://github.com/rominavarela-practicas/frontend-frameworks/assets/7092275/56e8bdde-a14d-45e6-bccc-8deefcdd4dc0)
+
+
