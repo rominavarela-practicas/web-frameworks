@@ -14,6 +14,11 @@ This project presents a minimal structure to showcase the integration with Auth0
 * Nodejs (version declared in `.nvmrc` file)
 
 * Yarn
+  
+* Auth0 "Single Page Application"
+
+  <img width="500" alt="Screen Shot 2023-07-14 at 6 15 53 p m" src="https://github.com/rominavarela-practicas/frontend-frameworks/assets/7092275/5f811336-f908-4c48-95d8-af409026914b">
+
 
 #### Instructions
 
