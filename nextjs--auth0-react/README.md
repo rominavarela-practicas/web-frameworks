@@ -19,6 +19,13 @@ This project presents a minimal structure to showcase the integration with Auth0
 
   <img width="500" alt="Screen Shot 2023-07-14 at 6 15 53 p m" src="https://github.com/rominavarela-practicas/frontend-frameworks/assets/7092275/5f811336-f908-4c48-95d8-af409026914b">
 
+  Settings:
+
+  ```
+  Allowed Callback URLs = http://localhost:3000
+  Allowed Logout URLs = http://localhost:3000
+  Allowed Web Origins = http://localhost:3000
+  ```
 
 #### Instructions
 
@@ -28,6 +35,7 @@ This project presents a minimal structure to showcase the integration with Auth0
 
 Open `http://localhost:3000/` in your browser. That's it!
 
-![Gb6xN5HmZg](https://github.com/rominavarela-practicas/frontend-frameworks/assets/7092275/56e8bdde-a14d-45e6-bccc-8deefcdd4dc0)
+Watch the demo:
 
+![L6PrwP1nNm](https://github.com/rominavarela-practicas/frontend-frameworks/assets/7092275/33b0cda9-bb3c-4f45-9ab5-bbe019c075bf)
 
