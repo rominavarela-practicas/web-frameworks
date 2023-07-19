@@ -13,7 +13,7 @@ export async function getStaticProps() {
   }
 
 export default function Countries({ countries }) {
-    console.log("Rendering /ssr/countries");
+    console.log("Rendering /static/countries");
     return (
         <Layout>
         <Head>
