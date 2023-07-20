@@ -18,7 +18,9 @@ export default function Home() {
 
       <hr />
         <div className={styles.grid}>
-          <Card title="Your User Dashboard" href="/u/dashboard"></Card>
+          <Card title="Your UserInfo" href="/u/userInfo">
+            Use the useAuth0 hook in your components to access the auth state and methods.
+          </Card>
         </div>
       </main>
     </Layout>
