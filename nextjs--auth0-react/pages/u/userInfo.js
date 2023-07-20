@@ -4,7 +4,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 import Layout from '../../components/layout/Layout';
 import { Loading } from '../../components/Loading';
 
-function UserInfo({ }) {
+function UserInfoPage({ }) {
     // Returns Auth0ContextInterface<TUser>
     const {
         // Auth state:
@@ -38,4 +38,4 @@ function UserInfo({ }) {
     );
 }
 
-export default withAuthenticationRequired(UserInfo);
+export default withAuthenticationRequired(UserInfoPage);

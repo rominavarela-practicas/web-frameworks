@@ -21,3 +21,7 @@ Start the project with the command `./gradlew bootRun`
   Note: Look for more available commands in the Makefile.
 
 Open `http://localhost:8080/health` in your browser. That's it!
+
+Watch the demo:
+
+![YTnJHqfJdE](https://github.com/rominavarela-practicas/frontend-frameworks/assets/7092275/7a52e04b-9f92-491d-9c53-2c3bf357833b)
