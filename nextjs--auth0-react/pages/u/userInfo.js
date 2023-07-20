@@ -32,7 +32,7 @@ function UserInfoPage({ }) {
         </Head>
             <h1>Hello "{user.name}"!</h1>
             <p>
-                Your user info: {JSON.stringify(user)}
+                Your User Info: {JSON.stringify(user)}
             </p>
         </Layout>
     );
