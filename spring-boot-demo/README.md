@@ -2,7 +2,7 @@
 
 # About this project
 
-This project presents a minimal structure to showcase specific features in Spring Boot, created with the Initializr Tool https://start.spring.io/ with the **Spring Web** initial dependecy.
+This project presents a minimal structure to showcase specific features in Spring Boot, created with the Initializr Tool https://start.spring.io/ with the **Spring Web** initial dependecy and following along with the [Spring Getting Started](https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html#getting-started.first-application.gradle) tutorial.
 
 | Technology Choise |  |
 | ----- | -----|
