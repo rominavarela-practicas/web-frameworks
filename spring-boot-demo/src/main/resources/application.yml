@@ -1,0 +1,8 @@
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          # Issuer URI links to https://romina-espinosa.auth0.com/.well-known/openid-configuration
+          issuer-uri: https://romina-espinosa.auth0.com/
+          audiences: romina-espinosa-main-api
