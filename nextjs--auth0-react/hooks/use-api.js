@@ -1,17 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 
-/*
-const {
-    loading,
-    error,
-    data: users = [],
-  } = useApi(`http://localhost:${PORT}/users`, {
-    audience: process.env.NEXT_PUBLIC_AUDIENCE,
-    scope: 'profile email read:users',
-  });
-*/
-
 export const useApi = (url, options) => {
   const { getAccessTokenSilently } = useAuth0();
   const [state, setState] = useState({
