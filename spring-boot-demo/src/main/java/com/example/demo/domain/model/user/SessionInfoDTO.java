@@ -1,16 +1,21 @@
 package com.example.demo.domain.model.user;
 
-public class SessionInfoDTO {
-    private String email;
+import lombok.Data;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 
-    public String getEmail() {
-        return email;
-    }
-    public void setEmail(String email) {
-        this.email = email;
-    }
-    public SessionInfoDTO(String email) {
-        super();
-        this.email = email;
-    }
+@Data
+@RequiredArgsConstructor
+public class SessionInfoDTO {
+
+    /**
+     * Subject of the JWT.- In the JSON Web Token (JWT) standard,
+     * the "sub" (subject) claim is a string that identifies the principal that is
+     * the subject of the JWT. This can be a human user, an organization, or a service.
+     * @see <a href="https://auth0.com/docs/secure/tokens/json-web-tokens/json-web-token-claims#registered-claims">
+     *  json-web-token-claims
+     * </a>
+     */
+    @NonNull
+    String subject;
 }
