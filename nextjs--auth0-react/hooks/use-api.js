@@ -24,6 +24,10 @@ export const useApi = (url, options) => {
             Authorization: `Bearer ${accessToken}`,
           },
         });
+        if (res.status === 403) {
+          const statusReason = res.statusText || res.headers.get('www-authenticate');
+          throw new Error(res.status + ' ' + statusReason);
+        }
         setState({
           ...state,
           data: await res.json(),

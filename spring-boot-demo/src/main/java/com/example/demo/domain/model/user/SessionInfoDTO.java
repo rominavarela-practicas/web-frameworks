@@ -1,11 +1,14 @@
 package com.example.demo.domain.model.user;
 
+import lombok.Builder;
 import lombok.Data;
 import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.Authentication;
+
+import java.util.List;
 
 @Data
-@RequiredArgsConstructor
+@Builder
 public class SessionInfoDTO {
 
     /**
@@ -18,4 +21,10 @@ public class SessionInfoDTO {
      */
     @NonNull
     String subject;
+
+    @NonNull
+    List<String> authorities;
+
+    @NonNull
+    Authentication authentication;
 }

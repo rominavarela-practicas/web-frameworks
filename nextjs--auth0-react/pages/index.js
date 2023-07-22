@@ -23,11 +23,16 @@ export default function Home() {
           </Card>
 
           <Card title="Your Access Token" href="/u/accessToken"></Card>
+        </div>
+        <hr />
 
-          <Card title="Spring Demo API" href="/u/springDemoApi">
+        <div className={styles.grid}>
+          <Card title="User Session" href="/u/userSession">
             In this architecture, the SPA will pass the Access Token in the HTTP Authorization
             header when making calls to the API
           </Card>
+
+          <Card title="Admin Session" href="/u/adminSession"></Card>
         </div>
       </main>
     </Layout>
