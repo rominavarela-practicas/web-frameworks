@@ -25,6 +25,8 @@ This project presents a minimal structure to showcase the integration with Auth0
   Allowed Callback URLs = http://localhost:3000
   Allowed Logout URLs = http://localhost:3000
   Allowed Web Origins = http://localhost:3000
+  Permissions:
+    ROLE_ADMIN - Admin Role Scoped Permission
   ```
 
 #### Instructions
@@ -37,5 +39,7 @@ Open `http://localhost:3000/` in your browser. That's it!
 
 Watch the demo:
 
-![L6PrwP1nNm](https://github.com/rominavarela-practicas/frontend-frameworks/assets/7092275/33b0cda9-bb3c-4f45-9ab5-bbe019c075bf)
+![JqlzkMpCOE](https://github.com/rominavarela-practicas/frontend-frameworks/assets/7092275/6452719d-9028-48a4-9b19-21f545e9073a)
+
+![MV42wv1NVY](https://github.com/rominavarela-practicas/frontend-frameworks/assets/7092275/e18b840f-9c6b-4856-85f8-d3404a47aac2)
 
