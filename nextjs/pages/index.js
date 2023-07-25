@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Image from 'next/image';
 import styles from '../styles/Index.module.scss';
 import Layout from '../components/layout/Layout';
 import Card from '../components/card/Card.js';
@@ -20,8 +21,17 @@ export default function Home() {
 
       <h1>Countries API</h1>
 
-        <div className={styles.grid}>
-          <Card title="With Static Site Rendering" href="/static/countries">
+        <div>
+          <Card title="Static Site Rendering" href="/static/countries"
+            image={(
+              <Image
+                src="/Nextjs-Static Rendering.drawio.png"
+                width={600}
+                height={400}
+                alt="Nextjs-Static Rendering Diagram"
+              />
+            )}
+          >
             <p>
               getStaticProps only runs on the server-side. It won’t even be included in
               the JS bundle for the browser. That means you can write code such as direct
@@ -37,32 +47,29 @@ export default function Home() {
             </ul>
           </Card>
 
-          <Card title="With Server Side Rendering" href="/ssr/countries">
+          <Card title="Dynamic Rendering" href="/ssr/countries"
+            image={(
+              <Image
+                src="/Nextjs-Dynamic Rendering.drawio.png"
+                width={600}
+                height={400}
+                alt="Nextjs-Static Rendering Diagram"
+              />
+            )}
+          >
             <p>
               Because getServerSideProps is called at request time, its parameter (context) contains
               request specific parameters. You should use getServerSideProps only if you need to pre-render
               a page whose data must be fetched at request time.
             </p>
           </Card>
-
-          <Card title="With Client Side Rendering" href="/swr/countries">
-            <p>
-              If you do not need to pre-render the data, you can also use the Client-side Rendering strategy:
-            </p>
-            <ul>
-              <li>
-                Statically generate (pre-render) parts of the page that do not require external data.
-              </li>
-              <li>
-                When the page loads, fetch external data from the client using JavaScript and populate the remaining parts.
-              </li>
-            </ul>
-          </Card>
         </div>
 
         <hr/>
 
-        <h1>Challenges</h1>
+        <h1>More Dynamic Rendering</h1>
+
+        <Card title="Countries API with SWR Client Hook" href="/swr/countries"></Card>
 
         <div className={styles.grid}>
           <Card title="Dynamic Counter using Client Side Rendering" href="/challenges/counter"></Card>
