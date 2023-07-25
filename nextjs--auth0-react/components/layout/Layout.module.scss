@@ -1,16 +1,12 @@
 .layout {
-
   h1 {
     padding-top: 1em;
   }
 }
 
 .layoutContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   min-height: 82vh;
+  padding: 2em;
 }
 
 @media (max-width: 600px) {
