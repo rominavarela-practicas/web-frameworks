@@ -1,10 +1,10 @@
 import Head from 'next/head';
 import Layout from '../../../components/layout/Layout';
-import { useCountries } from '../../../hooks/useCountries';
+import { fetchCountries } from '../../../backend/fetch/fetchCountries';
 
 export async function getServerSideProps() {
-    console.log("getServerSideProps at /static/countries");
-    const countries = await useCountries();
+    console.log("getServerSideProps at /ssr/countries");
+    const countries = await fetchCountries();
     return {
       props: {
         countries,

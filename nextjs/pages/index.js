@@ -42,12 +42,12 @@ export default function Home() {
                 In development it will run on every request
               </li>
               <li>
-                In production it will run at runtime.
+                In production it will run at build runtime.
               </li>
             </ul>
           </Card>
 
-          <Card title="Dynamic Rendering" href="/ssr/countries"
+          <Card title="Dynamic SSR (Server Side Rendering)" href="/ssr/countries"
             image={(
               <Image
                 src="/Nextjs-Dynamic Rendering.drawio.png"
@@ -58,9 +58,10 @@ export default function Home() {
             )}
           >
             <p>
+              If you need to fetch data at request time instead of at build time, you can try Server-side Rendering.
+              To do this, you need to export getServerSideProps instead of getStaticProps from your page.
               Because getServerSideProps is called at request time, its parameter (context) contains
-              request specific parameters. You should use getServerSideProps only if you need to pre-render
-              a page whose data must be fetched at request time.
+              request specific parameters.
             </p>
           </Card>
         </div>
