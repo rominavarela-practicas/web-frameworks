@@ -26,8 +26,13 @@ Open `http://localhost:3000/` in your browser. That's it!
 
 Watch the demo:
 
-![1_9Rr5xhQnB4](https://github.com/rominavarela-practicas/frontend-frameworks/assets/7092275/addd972c-dc4e-4c0d-9a12-62082e66be09)
+![9vQ123vo0k](https://github.com/rominavarela-practicas/web-frameworks/assets/7092275/f92fa7ec-e0d0-469e-80be-60880e6ea3f5)
 
-![2_sEIfuPZkTU](https://github.com/rominavarela-practicas/frontend-frameworks/assets/7092275/be915c0e-2feb-4276-b306-9b72ecf0261c)
+![HMkddPdmzi](https://github.com/rominavarela-practicas/web-frameworks/assets/7092275/96fbbe23-ea55-4dd8-8d45-2dcbc8e9919c)
 
-![3_nlSoMPq1XN](https://github.com/rominavarela-practicas/frontend-frameworks/assets/7092275/dce6edde-14b4-4b10-be1a-5a6bfe0d6d4b)
+![X3nNu1xL6x](https://github.com/rominavarela-practicas/web-frameworks/assets/7092275/f8f8a158-43c5-4eab-835b-a53e667938b0)
+
+![nUEb6qJBiM](https://github.com/rominavarela-practicas/web-frameworks/assets/7092275/95662afb-4e27-4e00-ab34-134e6849e631)
+
+![4wsIRBJBgv](https://github.com/rominavarela-practicas/web-frameworks/assets/7092275/fd7fe725-2151-4b97-b8e4-172e62ea54c8)
+
