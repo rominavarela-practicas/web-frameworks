@@ -1,17 +1,32 @@
-.cardContainer {
+.cardContainerXl {
+    display: inline-block;
+    margin-right: 2em;
+    max-width: 50em;
+}
+
+.cardContainerSm {
+    display: inline-block;
+    margin-right: 2em;
     max-width: 20em;
-    display: block;
+}
+
+.cardContainer {
     margin: 1em;
+    display: table;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    h1 {
+        font-size: 1em;
+        padding-left: 1em;
+    }
 }
 
 .card {
     padding: 1em;
-    background-color: #cfffff;
-    max-width: 20em;
-    display: block;
-    border: 1px solid #eaeaea;
-    border-radius: 10px;
     transition: color 0.15s ease, border-color 0.15s ease;
+    display: table-cell;
+    vertical-align: top;
+    min-width: 15em;
 
     a {
         background: #719fc0;

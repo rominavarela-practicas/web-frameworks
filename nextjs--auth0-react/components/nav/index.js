@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useAuth0 } from '@auth0/auth0-react';
 import { useRouter } from 'next/router';
 import styles from './Nav.module.scss';
-import { Loading } from '../Loading';
+import { Loading } from '@/components/Loading';
 
 export function Nav() {
   const { isAuthenticated, isLoading, user, loginWithRedirect, logout } =

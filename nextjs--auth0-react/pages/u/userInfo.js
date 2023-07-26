@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import { withAuthenticationRequired } from '@auth0/auth0-react';
 import { useAuth0 } from '@auth0/auth0-react';
-import Layout from '../../components/layout/Layout';
-import { Loading } from '../../components/Loading';
+import Layout from '@/components/layout';
+import { Loading } from '@/components/Loading';
 
 function UserInfoPage({ }) {
     // Returns Auth0ContextInterface<TUser>

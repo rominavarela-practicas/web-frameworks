@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Head from 'next/head';
-import Layout from '../../components/layout/Layout';
+import Layout from '@/components/layout';
 
 export default function Countries() {
     console.log("Rendering /challenges/counter");

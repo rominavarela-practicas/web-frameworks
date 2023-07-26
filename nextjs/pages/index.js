@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image';
 import styles from '../styles/Index.module.scss';
-import Layout from '../components/layout/Layout';
-import Card from '../components/card/Card.js';
+import Layout from '@/components/layout';
+import Card from '@/components/card';
 
 export default function Home() {
   console.log("Rendering Home");

@@ -2,8 +2,8 @@ import Head from 'next/head';
 import { useEffect, useState } from 'react';
 import { withAuthenticationRequired } from '@auth0/auth0-react';
 import { useAuth0 } from '@auth0/auth0-react';
-import Layout from '../../components/layout/Layout';
-import { Loading } from '../../components/Loading';
+import Layout from '@/components/layout';
+import { Loading } from '@/components/Loading';
 
 const authorizationParams = {
     audience: process.env.NEXT_PUBLIC_AUDIENCE,

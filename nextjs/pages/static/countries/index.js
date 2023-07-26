@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import Layout from '../../../components/layout/Layout';
-import { fetchCountries } from '../../../backend/fetch/fetchCountries';
+import Layout from '@/components/layout';
+import { fetchCountries } from '@/backend/fetch/fetchCountries';
 
 export async function getStaticProps() {
     console.log("getStaticProps at /static/countries");

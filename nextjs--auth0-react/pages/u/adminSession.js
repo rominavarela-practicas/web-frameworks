@@ -1,10 +1,10 @@
 import Head from 'next/head';
 import { withAuthenticationRequired } from '@auth0/auth0-react';
-import Layout from '../../components/layout/Layout';
-import { Loading } from '../../components/Loading';
-import { ErrorComponent } from '../../components/Error';
+import Layout from '@/components/layout';
+import { Loading } from '@/components/Loading';
+import { ErrorComponent } from '@/components/Error';
 
-import { useApi } from '../../hooks/use-api';
+import { useApi } from '@/hooks/useApi';
 
 function Body({ }) {
   const {

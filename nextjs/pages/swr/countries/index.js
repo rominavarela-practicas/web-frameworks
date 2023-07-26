@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import Layout from '../../../components/layout/Layout';
 import axios from "axios";
 import useSWR from 'swr';
+import Layout from '@/components/layout';
 
 export default function Countries() {
     console.log("Rendering /swr/countries");
