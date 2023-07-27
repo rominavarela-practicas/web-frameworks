@@ -5,7 +5,14 @@
  * or to add global styles.
 */
 import '../styles/globals.scss';
+import { ReducerContext } from "@/context/reducer/ReducerContext";
 
 export default function App({ Component, pageProps }) {
-    return <Component {...pageProps} />;
-  }
+  return (
+    <>
+        <ReducerContext>
+          <Component {...pageProps} />
+        </ReducerContext>
+    </>
+  );
+}

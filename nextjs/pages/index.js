@@ -16,6 +16,18 @@ export default function Home() {
       <main>
 
       <h1>Hello Next!</h1>
+      <p>
+        When a route is loaded with Next.js, the initial HTML is rendered on the server.
+        This HTML is then progressively enhanced in the browser.
+        Server Components allow developers to, for example, move data fetching to the server,
+        closer to the database, or keep large dependencies that previously would impact the
+        client JavaScript bundle size on the server, leading to improved performance.
+        All components inside the App Router are Server Components by default, and developers can also
+        optionally opt-in to Client Components using the 'use client' directive.
+        Server and Client Components can be combined in the same component tree. To improve the
+        application performance, the recommendation is to move Client Components to the leaves of the
+        component tree where possible.
+      </p>
 
       <hr />
 
@@ -70,7 +82,9 @@ export default function Home() {
 
         <h1>More Dynamic Rendering</h1>
 
-        <Card title="Countries API with SWR Client Hook" href="/swr/countries"></Card>
+        <Card title="Countries API with SWR Client Hook (Reload every time)" href="/swr/countries"></Card>
+
+        <Card title="Countries API with SWR Client Hook with Reducer Context" href="/withContext/countries"></Card>
 
         <div className={styles.grid}>
           <Card title="Dynamic Counter using Client Side Rendering" href="/challenges/counter"></Card>
