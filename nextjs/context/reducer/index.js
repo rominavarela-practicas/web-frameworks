@@ -1,18 +1,18 @@
 import { createContext, useContext, useReducer } from 'react';
 import { reducer, initialState } from './reducer';
 
-const AppContext = createContext();
+const ReducerContext = createContext();
 
-export function ReducerContext({ children }) {
+export function ReducerProvider({ children }) {
    const [ state, dispatch ] = useReducer(reducer, initialState);
    
    return (
-      <AppContext.Provider value={{ state, dispatch }}>
+      <ReducerContext.Provider value={{ state, dispatch }}>
          {children}
-      </AppContext.Provider>
+      </ReducerContext.Provider>
    );
 }
 
 export function useReducerContext() {
-   return useContext(AppContext);
+   return useContext(ReducerContext);
 }

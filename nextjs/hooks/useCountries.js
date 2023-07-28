@@ -1,6 +1,6 @@
 import useSWR from 'swr';
 import axios from "axios";
-import { useReducerContext } from "@/context/reducer/ReducerContext";
+import { useReducerContext } from "@/context/reducer";
 import * as actions from '@/context/reducer/actions';
 
 export const useCountries = () => {
