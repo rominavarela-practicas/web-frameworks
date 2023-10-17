@@ -1,0 +1,3 @@
+build:
+	mvn dependency:resolve
+
