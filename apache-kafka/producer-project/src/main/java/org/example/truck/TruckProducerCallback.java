@@ -1,9 +1,9 @@
-package org.example.order;
+package org.example.truck;
 
 import org.apache.kafka.clients.producer.Callback;
 import org.apache.kafka.clients.producer.RecordMetadata;
 
-public class OrderProducerCallback implements Callback {
+public class TruckProducerCallback implements Callback {
 
     @Override
     public void onCompletion(RecordMetadata recordMetadata, Exception ex) {
