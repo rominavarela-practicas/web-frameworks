@@ -3,11 +3,13 @@ package org.example;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
+import org.apache.kafka.common.serialization.StringSerializer;
 import org.example.truck.TruckConfig;
+import org.example.truck.TruckCoordinates;
+import org.example.truck.TruckCoordinatesSerializer;
 import org.example.truck.TruckProducerCallback;
 
 import java.util.Properties;
-import java.util.UUID;
 
 public class App
 {
@@ -15,11 +17,12 @@ public class App
     {
         Properties props = new Properties();
         props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
-        props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
-        props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
+        props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
+        props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, TruckCoordinatesSerializer.class.getName());
 
-        KafkaProducer<String, String> producer = new KafkaProducer<>(props);
-        ProducerRecord<String, String> record = new ProducerRecord<>(TruckConfig.TOPIC_NAME, randomID(), randomCoordinates());
+        KafkaProducer<String, TruckCoordinates> producer = new KafkaProducer<>(props);
+        TruckCoordinates randomTruck = generateRandomTruck();
+        ProducerRecord<String, TruckCoordinates> record = new ProducerRecord<>(TruckConfig.TOPIC_NAME, randomTruck.getId(), randomTruck);
         try {
             producer.send(record, new TruckProducerCallback());
         } catch (Exception ex) {
@@ -29,11 +32,11 @@ public class App
         }
     }
 
-    public static String randomID() {
-        return "truck-" + ((int) (Math.random() * 10));
-    }
-
-    public static String randomCoordinates() {
-        return String.format("%s N,%s E", Math.random() * 100, Math.random() * 100);
+    public static TruckCoordinates generateRandomTruck() {
+        return TruckCoordinates.builder()
+                .id("truck-" + ((int) (Math.random() * 10)))
+                .latitude((int) Math.random() * 100)
+                .longitude((int) Math.random() * 100)
+                .build();
     }
 }

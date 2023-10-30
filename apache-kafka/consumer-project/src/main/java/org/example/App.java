@@ -4,7 +4,10 @@ import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
+import org.apache.kafka.common.serialization.StringDeserializer;
 import org.example.truck.TruckConfig;
+import org.example.truck.TruckCoordinates;
+import org.example.truck.TruckCoordinatesDeserializer;
 
 import java.time.Duration;
 import java.util.Collections;
@@ -21,16 +24,17 @@ public class App
     {
         Properties props = new Properties();
         props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
-        props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringDeserializer");
-        props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringDeserializer");
+        props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
+        props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, TruckCoordinatesDeserializer.class.getName());
         props.put(ConsumerConfig.GROUP_ID_CONFIG, "OrderGroup");
         props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "latest");
 
-        KafkaConsumer<String, String> consumer = new KafkaConsumer<>(props);
+        KafkaConsumer<String, TruckCoordinates> consumer = new KafkaConsumer<>(props);
         consumer.subscribe(Collections.singletonList(TruckConfig.TOPIC_NAME));
-        ConsumerRecords<String, String> records = consumer.poll(Duration.ofSeconds(20));
-        for(ConsumerRecord<String, String> record: records) {
-            System.out.println(String.format("Key = %s, Value = %s", record.key(), record.value()));
+        ConsumerRecords<String, TruckCoordinates> records = consumer.poll(Duration.ofSeconds(20));
+        for(ConsumerRecord<String, TruckCoordinates> record: records) {
+            System.out.println(String.format("Key = %s, Id = %s, Lat = %s, Lon = %s",
+                    record.key(), record.value().getId(), record.value().getLatitude(), record.value().getLongitude()));
         }
     }
 }
