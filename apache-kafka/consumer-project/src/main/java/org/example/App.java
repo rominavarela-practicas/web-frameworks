@@ -30,6 +30,7 @@ public class App
         props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "latest");
         props.put("schema.registry.url", "http://localhost:8085");
         props.put("specific.avro.reader", "true");
+        props.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "false");
 
         KafkaConsumer<String, TruckCoordinates> consumer = new KafkaConsumer<>(props);
 
@@ -40,6 +41,7 @@ public class App
             System.out.println(String.format("Key = %s, Id = %s, Lat = %s, Lon = %s",
                     record.key(), record.value().getId(), record.value().getLatitude(), record.value().getLongitude()));
         }
+        consumer.commitSync();
         consumer.close();
     }
 }
