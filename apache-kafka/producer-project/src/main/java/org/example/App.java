@@ -59,6 +59,12 @@ public class App
                 // When enabled (true), a producer will ensure that exactly one copy of a message is written to the stream.
                 "false"
         );
+        /*props.put(ProducerConfig.TRANSACTIONAL_ID_CONFIG,
+        // You can only have a single transaction in progress at a time with a producer instance.
+        // If you have multiple threads doing separate processing, you should have a producer instance per thread.
+        // Also you can use apache common pool2 to create a producer instance pool.
+                "producer-{instance-id}"
+        );*/
         props.put(ProducerConfig.RETRIES_CONFIG, "3");
         props.put(ProducerConfig.RETRY_BACKOFF_MS_CONFIG, "500");
 
@@ -66,6 +72,7 @@ public class App
         TruckCoordinates randomTruck = generateRandomTruck();
         ProducerRecord<String, TruckCoordinates> record = new ProducerRecord<>(TruckConfig.TOPIC_NAME, randomTruck.getId().toString(), randomTruck);
         try {
+            // producer.initTransactions();
             producer.send(record, new TruckProducerCallback());
         } catch (Exception ex) {
             ex.printStackTrace();
