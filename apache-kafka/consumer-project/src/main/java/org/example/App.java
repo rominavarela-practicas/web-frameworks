@@ -13,6 +13,8 @@ import java.time.Duration;
 import java.util.Collections;
 import java.util.Properties;
 
+import static org.example.truck.TruckConfig.POLL_INTERVAL_SEC;
+
 
 /**
  * Hello world!
@@ -36,12 +38,17 @@ public class App
 
         consumer.subscribe(Collections.singletonList(TruckConfig.TOPIC_NAME));
 
-        ConsumerRecords<String, TruckCoordinates> records = consumer.poll(Duration.ofSeconds(20));
-        for(ConsumerRecord<String, TruckCoordinates> record: records) {
-            System.out.println(String.format("Key = %s, Id = %s, Lat = %s, Lon = %s",
-                    record.key(), record.value().getId(), record.value().getLatitude(), record.value().getLongitude()));
+        try {
+            while (true) {
+                ConsumerRecords<String, TruckCoordinates> records = consumer.poll(Duration.ofSeconds(POLL_INTERVAL_SEC));
+                for(ConsumerRecord<String, TruckCoordinates> record: records) {
+                    System.out.println(String.format("Key = %s, Id = %s, Lat = %s, Lon = %s",
+                            record.key(), record.value().getId(), record.value().getLatitude(), record.value().getLongitude()));
+                }
+                consumer.commitSync();
+            }
+        } catch (Exception ex) {
+            consumer.close();
         }
-        consumer.commitSync();
-        consumer.close();
     }
 }
