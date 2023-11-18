@@ -19,10 +19,10 @@ public class App
         Properties props = new Properties();
         props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
         props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
-        props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, IntegerSerializer.class.getName());
+        props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
 
-        KafkaProducer<String, Integer> producer = new KafkaProducer<>(props);
-        ProducerRecord<String, Integer> record = new ProducerRecord<>(TOPIC_NAME, ((int) (Math.random() * 100)));
+        KafkaProducer<String, String> producer = new KafkaProducer<>(props);
+        ProducerRecord<String, String> record = new ProducerRecord<>(TOPIC_NAME, fruitName());
         try {
             producer.send(record, (metadata, ex) -> {
                 if (ex != null) {
@@ -35,6 +35,14 @@ public class App
             ex.printStackTrace();
         } finally {
             producer.close();
+        }
+    }
+
+    static String fruitName() {
+        if(Math.random() * 2 > 1) {
+            return "banana";
+        } else {
+            return "apple";
         }
     }
 }
