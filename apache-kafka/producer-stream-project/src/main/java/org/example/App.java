@@ -12,7 +12,7 @@ import java.util.UUID;
 
 public class App
 {
-    public static final String TOPIC_NAME = "NumbersStreamDataflowTopic";
+    public static final String TOPIC_NAME = "NumbersStreamDataflowTopic0";
 
     public static void main( String[] args )
     {
@@ -24,7 +24,13 @@ public class App
         KafkaProducer<String, Integer> producer = new KafkaProducer<>(props);
         ProducerRecord<String, Integer> record = new ProducerRecord<>(TOPIC_NAME, ((int) (Math.random() * 100)));
         try {
-            producer.send(record);
+            producer.send(record, (metadata, ex) -> {
+                if (ex != null) {
+                    ex.printStackTrace();
+                } else {
+                    System.out.println(metadata.toString());
+                }
+            });
         } catch (Exception ex) {
             ex.printStackTrace();
         } finally {

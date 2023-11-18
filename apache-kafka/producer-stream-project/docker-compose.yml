@@ -35,6 +35,7 @@ services:
       KAFKA_CONFLUENT_SUPPORT_METRICS_ENABLE: 'false'
       KAFKA_ALLOW_EVERYONE_IF_NO_ACL_FOUND: 'true'
       KAFKA_AUTO_LEADER_REBALANCE_ENABLE: 'true'
+      TOPIC_AUTO_CREATE: 'false' # Run init command in Makefile instead
     ports:
       - 9092:9092
     links:
